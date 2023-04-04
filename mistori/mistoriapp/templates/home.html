@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block main_body %}
+    <body>
+        {% csrf_token %}
+        <form action = "/story">
+            <h2>Have your experiences documented!</h2>
+            <div class="form-group">
+                <label for="name">What is your name?</label>
+                <input type="text"></input>
+              </div>
+            <div class="form-group">
+              <label for="topic">What's the story about?</label>
+              <input type="text">
+            </div>
+            <div class="form-group">
+              <label for="audience">Who's listening?</label>
+              <input type="text">
+            </div>
+            <div class="form-group">
+              <label for="keyword">What do you want featured or highlighted?</label>
+              <input type="text"></input>
+            </div>
+            <button>Ask Mistori</button>
+          </form>
+          <br>
+          <hr>
+            <p>
+            {% if data %}
+            {{data}}
+            {% endif %}
+            </p>
+        </body>
+  {% endblock %}
+ </html>
