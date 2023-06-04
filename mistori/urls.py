@@ -19,6 +19,7 @@ from mistoriapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.form),
-    path('story', views.story, name="script"),
+    path('', views.home, name='home'),
+    path('form/', views.form, name='form'),
+    path('form_submit/', views.form_submit, name='form_submit'),
 ]
